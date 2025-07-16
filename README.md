@@ -1,295 +1,365 @@
-# GENSHIN DISCORD BOT
-Invite the Bot to your own server
+Genshin & Star Rail Discord Bot
+<p align="center">
+<a href="https://github.com/KT-Yeh/Genshin-Discord-Bot/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KT-Yeh/Genshin-Discord-Bot?style=flat-square"></a>
+<a href="https://github.com/KT-Yeh/Genshin-Discord-Bot"><img src="https://img.shields.io/github/stars/KT-Yeh/Genshin-Discord-Bot?style=flat-square"></a>
+<a href="https://discord.com/application-directory/943351827758460948"><img src="https://img.shields.io/badge/bot-%E2%9C%93%20verified-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
+<a href="https://discord.com/application-directory/943351827758460948"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fgenshin-dc-bot.kty.one%2Fguilds-count&style=flat-square&logo=Discord&logoColor=white&cacheSeconds=3600"></a>
+<a href="https://discord.gg/myugWxgRjd"><img src="https://img.shields.io/discord/963975812443414538?style=flat-square&logo=Discord&logoColor=white&label=support&color=5865F2"></a>
+</p>
 
-[![Badge](https://dcbadge.vercel.app/api/shield/1199307310980419605?bot=true&style=flat&theme=discord-inverted)](https://discord.com/api/oauth2/authorize?client_id=1199307310980419605&permissions=2147765313&scope=bot%20applications.commands)
+Welcome to use all or part of the code from this project in your own bot. You just need to include the author and link to this project on your project's website, README, or any public documentation.
 
-Join Support Server
+Feel free to take all or part of the code to your own bot, just put the author and URL of this project in your project's website, README or any public documentation.
 
-[![](https://dcbadge.vercel.app/api/server/Gh9TRfnVEk?style=flat)](https://discord.gg/Gh9TRfnVEk)
+Invite Genshin Helper
+(https://i.imgur.com/ULhx0EP.png)
 
-## What does this bot do?
-This bot can be used to check various information from Genshin Impact, Honkai Impact 3rd & Honkai Star Rail directly in Discord channels, including:
+Click the image above or the invitation link: https://bit.ly/原神小幫手邀請
+Discord Support Server: https://discord.gg/myugWxgRjd
 
-- Query realtime in-game data
-    - <u>**Genshin Impact:**</u> <br> Includes Resin, Realm Currency, Parametric Transformer, Expedition completion time, etc.
+Introduction
+Use the bot directly in Discord chat channels to view various information from Genshin Impact and Honkai: Star Rail, including:
 
-    - <u>**Star Rail:**</u> <br> Includes Exploration Power, Commission Execution.
+Genshin Impact, Honkai Impact 3rd, Honkai: Star Rail, Tears of Themis, Zenless Zone Zero:
 
-- Daily automatic check-in for Hoyolab (includes check-ins for Genshin Impact, Honkai Impact 3rd, Star Rail & Tears of Themis).
+Auto Check-in: Set a time to automatically check in to Hoyolab daily to claim rewards.
 
-- Automatic checks for real-time expeditions (Genshin Impact, Star Rail), Resins, Realm Currency, Parametric Transformer, and Expedition completion. Sends reminders when they are close to being full/complete.
+Genshin Impact, Honkai: Star Rail, Zenless Zone Zero:
 
-- Check Spiral Abyss records, Forgotten hall records & Pure fiction records.
+Query Real-time Notes
 
-- Check Traveler's Notes 
+Genshin Impact: Includes Resin, Daily Commissions, Realm Currency, Parametric Transformer, Expedition Dispatches.
 
-- Personal record card (days active, achievements, Anemoculi/Geoculi, world exploration progress, etc.)
+Honkai: Star Rail: Includes Trailblaze Power, Daily Training, Simulated Universe, Echo of War, Assignment Execution.
 
-- Display the character showcase for any player in Genshin Impact/Star Rail, showing the builds of the showcased characters.
+Zenless Zone Zero: Includes Battery, Daily Activity, Scratch Card, Video Store Management.
 
-- View in-game announcements for Genshin Impact, including events and gacha information.
+Auto Check Real-time Notes: Sends reminders when Resin (Trailblaze Power, Battery), Dailies, Realm Currency, Parametric Transformer, Expeditions are almost full.
 
-- Use the new slash commands with auto-suggest features. No need to memorize command usage.
+Query Spiral Abyss, Forgotten Hall, Pure Fiction records, and save records for each period.
 
-## Project Folder Structure
+Query Character Showcases of any player, displaying character stats and artifact details in the showcase.
 
-```
-genshin-discord-bot
-├── assets           = Folder for storing assets
+Genshin Impact:
+
+Personal record card, including game days, achievements, Oculi, world exploration progress, etc.
+
+Query Traveler's Diary.
+
+View in-game announcements, including event and banner information.
+
+Search database, including characters, weapons, various items, achievements, and Genius Invokation TCG card data.
+
+How to Use
+After inviting the bot to your server, type slash / to view various commands.
+
+For the first time, please use the /cookie設定 (cookie settings) command. How to obtain cookies: https://bit.ly/3LgQkg0
+
+To set up auto check-in and real-time note reminders, use the /schedule排程 (schedule) command.
+
+Demo
+For more demo images and GIFs, please refer to the Bahamut introduction article: https://forum.gamer.com.tw/Co.php?bsn=36730&sn=162433
+
+(https://i.imgur.com/LcNJ2as.png)
+(https://i.imgur.com/IEckUqY.jpg)
+(https://i.imgur.com/PA5HIDO.gif)
+
+Project Folder Structure
+Genshin-Discord-Bot
+├── assets           = Folder for assets
 |   ├── font         = Fonts used for drawing
-|   └── image        = Images and background images used for drawing
-├── cogs             = Discord.py cog folder, containing all bot commands
-├── cogs_external    = Custom Discord.py cog folder,add your commands.
-├── configs          = Bot's Configuration file folder
-├── database         = SQLAlchemy ORM, database operation-related code
+|   └── image        = Assets and background images used for drawing
+├── cogs             = Folder for discord.py cogs, containing all bot commands
+├── cogs_external    = Folder for custom discord.py cogs, you can put your own command files here
+├── configs          = Folder for configuration files
+├── database         = SQLAlchemy ORM, database operation related code
+|   ├── alembic      = Database schema migration version control
 |   ├── dataclass    = Custom data classes
-|   └── legacy       = Old database code used for data migration
+|   └── legacy       = Old database code, only used for migrating old data
 ├── enka_network     = Code related to Enka Network API
 |   └── enka_card    = Submodule, code related to drawing Enka images
 ├── genshin_db       = Code related to genshin-db API
-|   └── models       =  Pydantic models for genshin-db data
+|   └── models       = Pydantic models for genshin-db data
 ├── genshin_py       = Code related to genshin.py
-|   ├── auto_task    = Code for automatic scheduled tasks(daily check-in)
-|   ├── client       = Code for making requests to APIs
-|   └── parser       = Code for converting API data into Discord embeds.
-├── star_rail        = Code for Star Rail showcase
-└── utility          = Code for utility functions used in this project.
-```
+|   ├── auto_task    = Code related to automatic scheduled tasks (e.g., check-in)
+|   ├── client       = Code related to requesting data from API
+|   └── parser       = Converts API data into discord embed format
+├── star_rail        = Honkai: Star Rail showcase code
+└── utility          = Settings, utility functions, Log, emojis, Prometheus, etc. used in this project
 
-## How to Setup the Bot?
-
-### Web Browser
+Self-Installation & Bot Setup
+Web Side
 You need to obtain the following in this step:
 
-1. Bot Application ID
-2. Bot Token
-3. Your Discord server ID
+Bot Application ID
 
-<details><summary>>>> Click to see the complete content <<<</summary>
+Bot Token
 
-1. Go to [Discord Developer Portal](https://discord.com/developers/applications "Discord Developer Portal") and log in with your Discord account.
+Your management server ID
 
-2. Click "New Application" to create an application. Enter the desired name and click "Create."<br>
-![](https://i.imgur.com/dbDHEM3.png)
-![](https://i.imgur.com/BcJcSnU.png)
+<details><summary>>>> Click here to view full content <<<</summary>
 
-3. On the Bot page, click "Add Bot" to add a bot.<br>
-![](https://i.imgur.com/lsIgGCi.png)
+Go to Discord Developer and log in to your Discord account.
 
-4. In OAuth2/URL Generator, check "bot," "applications.commands," and "Send Messages." The URL generated at the bottom is the invitation link for the bot. Open the link to invite the bot to your server.<br>
-![](https://i.imgur.com/y1Ml43u.png)
+(https://i.imgur.com/dbDHEM3.png)
 
+Click "New Application" to create an application, enter the desired name, then click "Create".
 
-### Getting values of bot_token, application_id & test_server_id for config file.
+(https://i.imgur.com/BcJcSnU.png)
 
-1. On the General Information page, get the Application ID of the bot.<br>
-![](https://i.imgur.com/h07q5zT.png)
+On the Bot page, click "Add Bot" to add a new bot.
 
-2. On the Bot page, click "Reset Token" to get the Bot Token.<br>
-![](https://i.imgur.com/BfzjewI.png)
+(https://i.imgur.com/lsIgGCi.png)
 
-3. Right-click on your Discord server name or icon, copy the server ID (enable Developer Mode in Settings -> Advanced -> Developer Mode).<br>
-![](https://i.imgur.com/tCMhEhv.png)
+In OAuth2/URL Generator, check "bot" and "applications.commands" and "Send Messages". The URL generated at the bottom is the bot's invitation link. Open the link to invite the bot to your server.
+
+(https://i.imgur.com/y1Ml43u.png)
+
+Obtain IDs required for configuration files
+In General Information, obtain the bot's Application ID.
+
+(https://i.imgur.com/h07q5zT.png)
+
+On the Bot page, click "Reset Token" to obtain the bot's Token.
+
+(https://i.imgur.com/BfzjewI.png)
+
+Right-click on your Discord server name or icon and copy the server ID (the "Copy ID" button requires enabling Developer Mode in Settings -> Advanced).
+
+(https://i.imgur.com/tCMhEhv.png)
 
 </details>
 
-### Locally
+Local Side
+First Time Use
+Install Docker (please Google tutorials if you don't know how to install it)
 
-- <details><summary>For Windows/Linux :</summary>
+Windows: Go to Docker official website to download and install. After installation, launch Docker Desktop. You will see a whale icon in the bottom right corner of the Windows desktop.
+(https://i.imgur.com/FlLszWB.png)
 
-    1. Install [Git](https://git-scm.com/download/win) & [Python Version == 3.10](https://www.python.org/downloads/release/python-3100/).<br>
+Linux: Official documentation, with different Distributions available on the left.
 
-    2. clone this repository using:
-    ```
-    git clone https://github.com/Lucifer7535/genshin-discord-bot.git
-    ```
-    3. Install pipenv to install required packages.
-    ```
-    pip install pipenv
-    ```
-    4. Open command prompt inside the cloned genshin-discord-bot folder. It should look like ```D:\Genshin-Discord-Bot>```, install the packages using
-    ```
-    pipenv install
-    ```
-    5. Use ```pipenv shell``` in the project folder path to run the virtual environment, after the packages are succesfully installed.
+From now on, unless otherwise specified, all instructions will be for Windows, using Powershell.
 
-    6. It would look like this ```(Genshin-Discord-Bot-4wfjLgXf) D:\Node\genshin-discord-bot>``` where ```(Genshin-Discord-Bot-4wfjLgXf)``` will be your environment name.
+Find a location where you want to store the data, create a new folder Genshin-Discord-Bot, then enter it.
 
-    7. Open the <u>**Utility\config.py**</u> file in a text editor. Fill in the Application ID, Server ID, and Bot Token obtained from the web browser. Save the file. Example:
-        - application_id: int = 1234567
-        - test_server_id: int = 1234567
-        - bot_token: str = "abcd12345"
+Download the docker-compose.yml file and place it in the folder.
 
-    8. Run the bot using
-    ```
-    python main.py
-    ```
-    
+Open the docker-compose.yml file with a text editor. Generally, you don't need to change anything except filling in the three fields below with the information you obtained in #Web Side. Other settings can be modified according to your needs. Save after completion.
+
+APPLICATION_ID=123456789
+
+TEST_SERVER_ID=123456789
+
+BOT_TOKEN=ABCD123456789
+
+Open Powershell in this folder and enter the following command to run:
+
+docker-compose up
+
+If you want to close Powershell and run in the background, use:
+
+docker-compose up -d
+
+You can open Docker Desktop from the whale icon in the bottom right of Windows to manage the bot's running status at any time.
+
+Note 1: When you see 【System】on_ready: You have logged in as XXXXX after running, it means the parameters are set correctly and the bot has started successfully. At this point, the bot will automatically synchronize all commands to your test server, which is called "local synchronization".
+
+Note 2: If you type slash / and don't see commands, please try CTRL + R to refresh or completely close and restart Discord software.
+
+Note 3: If you want to use it across multiple servers, type $jsk sync in the bot's private message channel and wait (a few minutes) for Discord to push the commands. This is called "global synchronization".
+
+Upgrading from old v1.2.1 (New installers can skip this)
+<details><summary>>>> Click here to view full content <<<</summary>
+
+Create a new folder Genshin-Discord-Bot, and follow steps 1-4 above.
+
+Copy the data from the old version's data folder: bot.db (emoji.json), to the corresponding location in the new folder.
+
+So now the new folder structure is as follows:
+
+Genshin-Discord-Bot/
+    ├── docker-compose.yml
+    └── data/
+        ├── bot/
+        │   └── bot.db
+        ├── app_commands.json
+        └── emoji.json
+
+Go back to the Genshin-Discord-Bot directory. Since the database structure has changed, you need to run the command first:
+
+Windows (Powershell): docker run -v ${pwd}/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database
+
+Linux: sudo docker run -v $(pwd)/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database
+
+After completing the database migration, run docker-compose up to start the bot.
+
 </details>
 
-- <details><summary>Using Docker (Windows/Linux): [Recommended]</summary>
+File Description & Data Backup
+After successfully running the bot, your folder structure should look like this:
 
-    1. Install Docker
-        - For Windows install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
-        - For Linux install [Docker](https://docs.docker.com/desktop/install/linux-install/).
+Genshin-Discord-Bot/
+    ├── docker-compose.yml  = Docker configuration file, all bot startup settings are in this file
+    ├── cogs_external/      = You can put your own discord.py cogs in this directory
+    └── data/               = All data generated during bot operation is stored in this directory
+        ├── bot/
+        │   └── bot.db          = Database file
+        ├── font/           = Folder for font data
+        ├── image/          = Folder for image data
+        ├── _app_commands.json  = Command mention configuration file
+        ├── _emoji.json         = Emoji configuration file
+        ├── grafana_dashboard.json = Grafana dashboard configuration file
+        └── prometheus.yml      = Prometheus server configuration file
 
-    2. Create a new folder where you want to setup the bot. for e.g. create a new folder named ```Genshin-Discord-Bot```.
+All data is stored in the data folder. You can back up the entire folder; to restore, simply overwrite the data folder with your backup.
 
-    3. Download the [docker-compose.yml](https://github.com/Lucifer7535/genshin-discord-bot/blob/a948d1f79e0f9024448c562f4f31ba0d25ca4a04/docker-compose.yml) file and place it in that folder you just created.
-    
-    4. Open the ```docker-compose.yml``` file in a text editor. Fill in the Application ID, Server ID, and Bot Token obtained from the [Web Browser](#web-browser). Save the file. Example:
-        - application_id: int = 1234567
-        - test_server_id: int = 1234567
-        - bot_token: str = "abcd12345"
+How to Update
+When the project has an update, go to the Genshin-Discord-Bot directory and open Powershell.
 
-    5. Open **Command Prompt/Powershell/Terminal** in this folder and enter the following command to run it. Make sure your Docker Desktop is running.
-    ```
-    docker-compose up
-    ```
-    
+Pull the new image
+
+docker-compose pull
+
+Restart the bot
+
+docker-compose up -d
+
+Emoji Configuration (data/emoji.json)
+<details><summary>Click here to view full content</summary>
+
+Optional, the bot can run normally without configuring emojis.
+
+Go to the data directory and rename _emoji.json to emoji.json.
+
+Upload relevant emojis to your own server.
+
+Fill in the corresponding emojis in the emoji.json file according to Discord format.
+
+Note:
+
+Discord emoji format: <:emoji_name:emoji_ID>, for example: <:Mora:979597026285200002>
+
+You can type \:emoji_name: in a Discord message channel to get the above format.
+
 </details>
 
-- <details><summary>For Android (termux):</summary>
+Sentry Configuration
+<details><summary>Click here to view full content</summary>
 
-    1. Install [Termux Monet](https://github.com/KitsunedFox/termux-monet/releases/tag/v0.118.0-33) based on your device's architecture.
+Optional. Sentry is used to track uncaught exceptions during program execution and sends detailed information such as function calls, variables, exceptions, etc., at the time of the exception to a web page for developers to track. If you don't need this feature, you can skip this setting.
 
-    2. Open the app and run these commands one by one after successfull execution of one after another.
-    ```
-    pkg update & pkg upgrade
-    ```
-    ```
-    pkg install git
-    ```
-    ```
-    pkg install tur-repo
-    ```
-    ```
-    pkg install python-is-python3.10/tur-packages
-    ```
-    ```
-    pkg install libjpeg-turbo libpng libzmq freetype
-    ```
-    ```
-    pip install greenlet
-    ```
-    3. clone this repository using:
-    ```
-    git clone https://github.com/Lucifer7535/genshin-discord-bot.git
-    ```
-    4. Install pipenv to install required packages.
-    ```
-    pip install pipenv
-    ```
-    5. Open the folder using ```cd genshin-discord-bot``` and run
-    ```
-    pipenv install
-    ```
-    6. Use ```pipenv shell``` in the project folder path to run the virtual environment, after the packages are succesfully installed.
+Register an account on the official website: https://sentry.io/
 
-    7. It would look like this ```(Genshin-Discord-Bot-4wfjLgXf)~genshin-discord-bot>``` where ```(Genshin-Discord-Bot-4wfjLgXf)``` will be your environment name.
+Create a Python project within your account. After creation, you can obtain the project's DSN URL (format: https://xxx@xxx.sentry.io/xxx).
 
-    8. Open the <u>**Utility\config.py**</u> file using nano. Use command ```nano utility/config.py
-    
-    9. Fill in the Application ID, Server ID, and Bot Token obtained from the web browser. Save the file. Example:
-        - application_id: int = 1234567
-        - test_server_id: int = 1234567
-        - bot_token: str = "abcd12345"
+Paste this DSN URL into the SENTRY_SDK_DSN field in the docker-compose.yml file.
 
-    10. Upgrade the pillow package from version 9.5.0 due to some errors in android linux based OS.
-    ```
-    pip install --upgrade pillow
-    ```
-    11. Run the bot using
-    ```
-    python main.py
+Note:
+
+If not specified, Sentry defaults to only sending exceptions that are not caught by try/except.
+
+If you want to send specific caught exceptions to Sentry, use sentry_sdk.capture_exception(exception) within that except block.
+
 </details>
 
-### Notes to be Considered:
+Admin Management Commands
+<details><summary>Click here to view full content</summary>
 
-**Note 1:**<br>
-When the bot is running, and you see【System】on_ready: You have logged in as XXXXX, it means the parameters are set correctly, and the bot has started successfully. The bot will automatically sync all commands to your test server, known as "local sync."
+Management commands can only be used within the test server configured in the settings file.
 
-**Note 2:**<br>
-If you can't see commands after typing /, try refreshing with CTRL + R or completely close and restart Discord.
+/status: Displays bot status, including latency, number of connected servers, connected server names.
+/system: Immediately starts daily check-in tasks, downloads new Enka showcase assets.
+/system precense string1,string2,string3,...: Changes the bot's display status (playing...), randomly changes to one of the set strings every minute, unlimited string quantity.
+/maintenance: Sets game maintenance time. Automatic schedules (check-in, resin check) will not execute during this time.
+/config: Dynamically changes values of some settings.
 
-**Note 3:**<br>
-To use the bot in multiple servers, type $jsk sync in the bot's DM and wait a few minutes for Discord to push the commands. This is known as "global sync."
+Additionally, the bot includes the jsk command which can load/reload modules, synchronize commands, execute code, etc. Please refer to the jishaku website for details.
+To use jsk commands, you can:
 
-Additionally, the bot includes the jsk command to load/reload modules, sync commands, execute code, etc. Refer to the [jishaku documentation](https://github.com/Gorialis/jishaku) for more information.<br>
+Use them in the bot's private messages, e.g., $jsk ping
 
-To use jsk commands:
+Tag the bot in a regular channel, e.g., @Genshin Helper jsk ping
 
-Use them in the bot's DM, for example: $jsk ping.<br>
-Tag the bot in a regular channel, for example: @bot_username jsk ping.
-
-
-## SCREENSHOTS:
-<details><summary>>>> Click to view screenshots <<<</summary>
-<br>
-
-1. Bot's Slash Commands<br>
-![](https://i.imgur.com/zwgJdqO.png)<br>
-<br>
-
-2. /showcase-characters<br>
-![](https://i.imgur.com/G3IrQcr.png)<br>
-<br>
-
-3. /abyss-record<br>
-![](https://i.imgur.com/46795lR.png)<br>
-<br>
-
-4. /characters-list<br>
-![](https://i.imgur.com/LdyWcUL.png)<br>
-<br>
-
-5. /diary_notes<br>
-![](https://i.imgur.com/LSOmvoX.png)<br>
-<br>
-
-6. /game-notices<br>
-![](https://i.imgur.com/UEqzuWO.png)<br>
-<br>
-
-7. /instant-notes<br>
-![](https://i.imgur.com/V0FASxg.png)<br>
-<br>
-
-8. /record-card(data overview)<br>
-![](https://i.imgur.com/dcelsvr.png)<br>
-<br>
-
-9. /record-card(world exploration)<br>
-![](https://i.imgur.com/CfTmFrR.png)<br>
-<br>
-
-10. /schedule command<br>
-![](https://i.imgur.com/rZ7Vu94.png)<br>
-<br>
-
-11. daily check-in<br>
-![](https://i.imgur.com/8a63R7n.png)<br>
-<br>
-
-12. scheduled reminders<br>
-![](https://i.imgur.com/z61kUh1.png)
 </details>
 
-## Acknowledgments
-SOURCE CODE:
-- [KT-Yeh/Genshin-Discord-Bot](https://github.com/KT-Yeh/Genshin-Discord-Bot)
+Prometheus / Grafana Monitoring Dashboard
+<details><summary>Click here to view full content</summary>
 
-API：
-- Hoyolab: https://github.com/thesadru/genshin.py
-- Discord: https://github.com/Rapptz/discord.py
-- Enka Network: https://github.com/EnkaNetwork/API-docs
-- Mihomo: https://march7th.xiaohei.moe/en/resource/mihomo_api.html
-- Genshin-DB: https://github.com/theBowja/genshin-db
+Dashboard Demo Image
+(https://i.imgur.com/SOctABS.png)
 
-Card：
-- [hattvr/enka-card](https://github.com/hattvr/enka-card)
-- [DEViantUA/HSRCard](https://github.com/DEViantUA/HSRCard)
-- [DEViantUA/GenshinPyRail](https://github.com/DEViantUA/GenshinPyRail)
+A total of three steps are required:
 
-Misc：
-- [Apollo-Roboto/discord.py-ext-prometheus](https://github.com/Apollo-Roboto/discord.py-ext-prometheus)
+Obtain an API Key from the Grafana official website.
+
+Configure the Prometheus server.
+
+Import the Dashboard into Grafana.
+
+1. Grafana Account Registration
+Register an account on the Grafana official website. During registration, you will be asked to select a Cloud region; the default is fine.
+
+After registration, return to the official website. In the top right corner, select My Account. As shown in the image below, you can see Grafana and Prometheus under GRAFANA CLOUD. Select Send Metrics on Prometheus.
+(https://i.imgur.com/YLaV2fB.png)
+
+Scroll to the middle of the page, select Generate now under Password / API Key, then the black-background section under Sending metrics is very important, stay on this page.
+(https://i.imgur.com/RlY8ovi.png)
+
+2. Configure Prometheus
+Go back to the bot folder, open the docker-compose.yml file with a text editor.
+
+Uncomment the entire prometheus section at the bottom (pay attention to indentation).
+
+Uncomment - PROMETHEUS_SERVER_PORT=9091 in the bot's advanced settings.
+
+Go to the data folder, open the prometheus.yml file with a text editor.
+
+Return to the Grafana webpage. You will see that the remote_write field on the webpage corresponds to the bottom of the prometheus.yml file. Fill in the settings from the webpage's remote_write into the corresponding fields in prometheus.yml, then save the file.
+
+remote_write:
+- url: https://....(Fill in Remote Write Endpoint here)
+  basic_auth:
+    username: 123456(Fill in Username / Instance ID here)
+    password: XXXXXX(Fill in Password / API Key here)
+
+Restart the bot with docker-compose up -d.
+
+Grafana Dashboard Import
+Once you have data, you also need to display it on a dashboard.
+
+Similar to steps 1-2, return to the official website. In the top right corner, select My Account, and this time click Launch on Grafana to start it.
+
+On the left, select Dashboards, then on the right, click New → Import, and then click the Upload JSON file button.
+(https://i.imgur.com/6TFw9EM.png)
+
+Go to the data folder, upload grafana_dashboard.json to Grafana, or you can copy and paste it into Grafana.
+
+After successfully importing the dashboard, you can see various bot data on the dashboard. This completes the process.
+
+</details>
+
+Acknowledgements
+APIs:
+
+Hoyolab: https://github.com/thesadru/genshin.py
+
+Discord: https://github.com/Rapptz/discord.py
+
+Enka Network: https://github.com/EnkaNetwork/API-docs
+
+Mihomo: https://march7th.xiaohei.moe/en/resource/mihomo_api.html
+
+Genshin-DB: https://github.com/theBowja/genshin-db
+
+Cards:
+
+hattvr/enka-card
+
+DEViantUA/HSRCard
+
+DEViantUA/GenshinPyRail
+
+Misc:
+
+Apollo-Roboto/discord.py-ext-prometheus
