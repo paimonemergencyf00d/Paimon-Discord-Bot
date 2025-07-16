@@ -1,4 +1,5 @@
-Genshin & Star Rail Discord Bot
+# Genshin Impact & Star Dome Railway Discord Bot
+
 <p align="center">
 <a href="https://github.com/KT-Yeh/Genshin-Discord-Bot/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KT-Yeh/Genshin-Discord-Bot?style=flat-square"></a>
 <a href="https://github.com/KT-Yeh/Genshin-Discord-Bot"><img src="https://img.shields.io/github/stars/KT-Yeh/Genshin-Discord-Bot?style=flat-square"></a>
@@ -7,359 +8,329 @@ Genshin & Star Rail Discord Bot
 <a href="https://discord.gg/myugWxgRjd"><img src="https://img.shields.io/discord/963975812443414538?style=flat-square&logo=Discord&logoColor=white&label=support&color=5865F2"></a>
 </p>
 
-Welcome to use all or part of the code from this project in your own bot. You just need to include the author and link to this project on your project's website, README, or any public documentation.
-
 Feel free to take all or part of the code to your own bot, just put the author and URL of this project in your project's website, README or any public documentation.
 
-Invite Genshin Helper
-(https://i.imgur.com/ULhx0EP.png)
+## Invite Genshin Impact Helper
+[![](https://i.imgur.com/ULhx0EP.png)](https://bit.ly/原神小帮手邀请)
+#### Click on the image above or the invitation link: https://bit.ly/原神小帮手邀请
+Discord Supported servers: https://discord.gg/myugWxgRjd
 
-Click the image above or the invitation link: https://bit.ly/原神小幫手邀請
-Discord Support Server: https://discord.gg/myugWxgRjd
+## Introduction
+Use the robot to view various information in Genshin Impact and Star Dome Railway directly in the Discord chat channel, including:
 
-Introduction
-Use the bot directly in Discord chat channels to view various information from Genshin Impact and Honkai: Star Rail, including:
+- Genshin Impact, Honkai Impact 3, Star Dome Railway, Undetermined Event Book, Absolute Zero:
+- **Automatic sign-in**: Set a time to automatically sign in to Hoyolab every day to claim your prize
 
-Genshin Impact, Honkai Impact 3rd, Honkai: Star Rail, Tears of Themis, Zenless Zone Zero:
+- Genshin Impact, Star Dome Railway, Absolute Zero:
+- Check **Instant Note**
+- Genshin Impact: including resin, daily commission, cave treasure money, parameter quality change instrument, exploration dispatch
+- Star Dome Railway: including pioneering power, daily training, simulated universe, aftermath of battle, commission execution
+- Absolute Zero: including power, today's activity, scratch cards, video store management
+- **Automatic check instant notes**: resin (pioneering power, power), daily, treasure money, quality change instrument, exploration dispatch, send reminders when the quota is almost full
+- Query the records of the Abyss, the Garden of Oblivion, and the Fictional Narrative, and save each record
+- Query any player's **character showcase**, display the panel and relics details of the character in the showcase
 
-Auto Check-in: Set a time to automatically check in to Hoyolab daily to claim rewards.
+- Genshin Impact:
+- Personal record card, including game days, achievements, divine pupils, world exploration, etc.
+- Query traveler's notes
+- View in-game announcements, including activities and card pool information
+- Search the database, including characters, weapons, various items, achievements, and Seven Saints card information
 
-Genshin Impact, Honkai: Star Rail, Zenless Zone Zero:
+## How to use
+- After inviting to your own server, enter the slash `/` to view various commands
+- Please use the command `/cookie setting` for the first time, Cookie acquisition method: https://bit.ly/3LgQkg0
+- Set automatic sign-in and instant note reminders, use the command `/schedule scheduling`
 
-Query Real-time Notes
+## Display
+More display pictures, GIF Please refer to the Bahamut introduction article: https://forum.gamer.com.tw/Co.php?bsn=36730&sn=162433
 
-Genshin Impact: Includes Resin, Daily Commissions, Realm Currency, Parametric Transformer, Expedition Dispatches.
+<img src="https://i.imgur.com/LcNJ2as.png" width="350"/>
+<img src="https://i.imgur.com/IEckUqY.jpg" width="500"/>
+<img src="https://i.imgur.com/PA5HIDO.gif" width="500"/>
 
-Honkai: Star Rail: Includes Trailblaze Power, Daily Training, Simulated Universe, Echo of War, Assignment Execution.
-
-Zenless Zone Zero: Includes Battery, Daily Activity, Scratch Card, Video Store Management.
-
-Auto Check Real-time Notes: Sends reminders when Resin (Trailblaze Power, Battery), Dailies, Realm Currency, Parametric Transformer, Expeditions are almost full.
-
-Query Spiral Abyss, Forgotten Hall, Pure Fiction records, and save records for each period.
-
-Query Character Showcases of any player, displaying character stats and artifact details in the showcase.
-
-Genshin Impact:
-
-Personal record card, including game days, achievements, Oculi, world exploration progress, etc.
-
-Query Traveler's Diary.
-
-View in-game announcements, including event and banner information.
-
-Search database, including characters, weapons, various items, achievements, and Genius Invokation TCG card data.
-
-How to Use
-After inviting the bot to your server, type slash / to view various commands.
-
-For the first time, please use the /cookie設定 (cookie settings) command. How to obtain cookies: https://bit.ly/3LgQkg0
-
-To set up auto check-in and real-time note reminders, use the /schedule排程 (schedule) command.
-
-Demo
-For more demo images and GIFs, please refer to the Bahamut introduction article: https://forum.gamer.com.tw/Co.php?bsn=36730&sn=162433
-
-(https://i.imgur.com/LcNJ2as.png)
-(https://i.imgur.com/IEckUqY.jpg)
-(https://i.imgur.com/PA5HIDO.gif)
-
-Project Folder Structure
+## Project folder structure
+```
 Genshin-Discord-Bot
-├── assets           = Folder for assets
-|   ├── font         = Fonts used for drawing
-|   └── image        = Assets and background images used for drawing
-├── cogs             = Folder for discord.py cogs, containing all bot commands
-├── cogs_external    = Folder for custom discord.py cogs, you can put your own command files here
-├── configs          = Folder for configuration files
-├── database         = SQLAlchemy ORM, database operation related code
-|   ├── alembic      = Database schema migration version control
-|   ├── dataclass    = Custom data classes
-|   └── legacy       = Old database code, only used for migrating old data
-├── enka_network     = Code related to Enka Network API
-|   └── enka_card    = Submodule, code related to drawing Enka images
-├── genshin_db       = Code related to genshin-db API
-|   └── models       = Pydantic models for genshin-db data
-├── genshin_py       = Code related to genshin.py
-|   ├── auto_task    = Code related to automatic scheduled tasks (e.g., check-in)
-|   ├── client       = Code related to requesting data from API
-|   └── parser       = Converts API data into discord embed format
-├── star_rail        = Honkai: Star Rail showcase code
-└── utility          = Settings, utility functions, Log, emojis, Prometheus, etc. used in this project
+├── assets = Folder for storing materials
+| ├── font = Fonts used for drawing
+| └── image = Materials and background images used for drawing
+├── cogs = Folder for storing discord.py cog Folder, where all robot commands are located
+├── cogs_external = Stores custom discord.py cog folder, where you can put your own command files
+├── configs = Folder for storing configuration files
+├── database = SQLAlchemy ORM, database operation related code
+| ├── alembic = = Database structure change version control
+| ├── dataclass = Customized data class
+| └── legacy = Previous database code, which is useless except for migrating old data
+├── enka_network = Code related to Enka Network API
+| └── enka_card = Submodule, code related to drawing Enka pictures
+├── genshin_db = Code related to genshin-db API
+| └── models = Pydantic models for storing genshin-db data
+├── genshin_py = Code related to genshin.py
+| ├── auto_task = Code related to automatic scheduling tasks (e.g. check-in)
+| ├── client = Code related to requesting data from the API
+| └── parser = Converting API data to discord embed format
+├── star_rail = Star Dome Railway Display Cabinet Code
+└── utility = Some settings, public functions, Log, emoticons, Prometheus... and other codes used in this project
+```
 
-Self-Installation & Bot Setup
-Web Side
+## Install & set up the robot yourself
+
+### Web side
 You need to obtain the following in this step:
+- Robot Application ID
+- Robot Bot token
+- Your own management server ID
 
-Bot Application ID
+<details><summary>>>> Click here to view the full content <<<</summary>
 
-Bot Token
+1. Go to [Discord Developer](https://discord.com/developers/applications "Discord Developer") Log in to your Discord account
 
-Your management server ID
+![](https://i.imgur.com/dbDHEM3.png)
 
-<details><summary>>>> Click here to view full content <<<</summary>
+2. Click "New Application" to create an application, enter the desired name and click "Create"
 
-Go to Discord Developer and log in to your Discord account.
+![](https://i.imgur.com/BcJcSnU.png)
 
-(https://i.imgur.com/dbDHEM3.png)
+3. On the Bot page, click "Add Bot" to add a new bot
 
-Click "New Application" to create an application, enter the desired name, then click "Create".
+![](https://i.imgur.com/lsIgGCi.png)
 
-(https://i.imgur.com/BcJcSnU.png)
+4. In OAuth2/URL Generator, check "bot", "applications.commands" and "Send Messages" respectively. The URL link generated at the bottom is the bot's invitation link. Open the link to invite the bot to your server
 
-On the Bot page, click "Add Bot" to add a new bot.
+![](https://i.imgur.com/y1Ml43u.png)
 
-(https://i.imgur.com/lsIgGCi.png)
+#### Get the ID required for the configuration file
 
-In OAuth2/URL Generator, check "bot" and "applications.commands" and "Send Messages". The URL generated at the bottom is the bot's invitation link. Open the link to invite the bot to your server.
+1. In General Information, get the robot's Application ID
 
-(https://i.imgur.com/y1Ml43u.png)
+![](https://i.imgur.com/h07q5zT.png)
 
-Obtain IDs required for configuration files
-In General Information, obtain the bot's Application ID.
+2. On the Bot page, click "Reset Token" to get the robot's Token
 
-(https://i.imgur.com/h07q5zT.png)
+![](https://i.imgur.com/BfzjewI.png)
 
-On the Bot page, click "Reset Token" to obtain the bot's Token.
+3. Right-click on your Discord **server name or icon** and copy the **server ID** (the Copy ID button needs to be turned on in Settings->Advanced->Developer Mode)
 
-(https://i.imgur.com/BfzjewI.png)
-
-Right-click on your Discord server name or icon and copy the server ID (the "Copy ID" button requires enabling Developer Mode in Settings -> Advanced).
-
-(https://i.imgur.com/tCMhEhv.png)
+![](https://i.imgur.com/tCMhEhv.png)
 
 </details>
 
-Local Side
-First Time Use
-Install Docker (please Google tutorials if you don't know how to install it)
+### Local side
 
-Windows: Go to Docker official website to download and install. After installation, launch Docker Desktop. You will see a whale icon in the bottom right corner of the Windows desktop.
-(https://i.imgur.com/FlLszWB.png)
+#### First use
+1. Install Docker (please follow Google instructions if you don't know how to install it)
 
-Linux: Official documentation, with different Distributions available on the left.
+- Windows: Download and install it from [Docker official website](https://www.docker.com/). After the installation is complete, start Docker Desktop. There will be a whale icon in the lower right corner of the Windows desktop
+![](https://i.imgur.com/FlLszWB.png)
+- Linux: [Official website description](https://docs.docker.com/engine/install/ubuntu/), there are different distribution options on the left
 
-From now on, unless otherwise specified, all instructions will be for Windows, using Powershell.
+The following instructions are based on Windows and Powershell unless otherwise specified
 
-Find a location where you want to store the data, create a new folder Genshin-Discord-Bot, then enter it.
+2. Find the place where you want to put the data, create a new folder `Genshin-Discord-Bot`, and then enter
 
-Download the docker-compose.yml file and place it in the folder.
+3. Download the [docker-compose.yml](https://github.com/KT-Yeh/Genshin-Discord-Bot/blob/master/docker-compose.yml) file and put it in the folder
 
-Open the docker-compose.yml file with a text editor. Generally, you don't need to change anything except filling in the three fields below with the information you obtained in #Web Side. Other settings can be modified according to your needs. Save after completion.
+4. Open the `docker-compose.yml` file in a text editor. Basically, you don’t need to modify it. Just fill in the three data you just got from [#网页端](#网页端) into the three fields below. Other settings can be modified according to your needs. Save after completion
+- APPLICATION_ID=`123456789`
+- TEST_SERVER_ID=`123456789`
+- BOT_TOKEN=`ABCD123456789`
 
-APPLICATION_ID=123456789
-
-TEST_SERVER_ID=123456789
-
-BOT_TOKEN=ABCD123456789
-
-Open Powershell in this folder and enter the following command to run:
-
+5. Open Powershell in this folder and enter the following command to run
+```
 docker-compose up
-
-If you want to close Powershell and run in the background, use:
-
+```
+If you want to turn off Powershell and run it in the background, use
+```
 docker-compose up -d
+```
+Open Docker Desktop with the whale icon in the lower right corner of Windows to manage the robot's running status at any time
 
-You can open Docker Desktop from the whale icon in the bottom right of Windows to manage the bot's running status at any time.
+Note 1: After running, you will see `【System】on_ready: You have
 
-Note 1: When you see 【System】on_ready: You have logged in as XXXXX after running, it means the parameters are set correctly and the bot has started successfully. At this point, the bot will automatically synchronize all commands to your test server, which is called "local synchronization".
+logged in as XXXXX` means the parameters are set correctly and started successfully. At this time, the robot will automatically synchronize all commands to your test server, which is called "local synchronization".
 
-Note 2: If you type slash / and don't see commands, please try CTRL + R to refresh or completely close and restart Discord software.
+Note 2: If you can't see the command after entering the slash /, try CTRL + R to refresh or completely close the Discord software and restart Discord.
 
-Note 3: If you want to use it across multiple servers, type $jsk sync in the bot's private message channel and wait (a few minutes) for Discord to push the commands. This is called "global synchronization".
+Note 3: If you want to use it between multiple servers, enter `$jsk sync` in your robot's private message channel and wait (about a few minutes) for Discord to push the command, which is called "global synchronization".
 
-Upgrading from old v1.2.1 (New installers can skip this)
-<details><summary>>>> Click here to view full content <<<</summary>
+#### Upgrade from the old version v1.2.1 (new installers do not need to read)
 
-Create a new folder Genshin-Discord-Bot, and follow steps 1-4 above.
+<details><summary>>>> Click here to view the full content <<<</summary>
 
-Copy the data from the old version's data folder: bot.db (emoji.json), to the corresponding location in the new folder.
+1. Create a new folder `Genshin-Discord-Bot`, and follow the above step 4
 
-So now the new folder structure is as follows:
+2. Copy the data in the old version's `data` folder: `bot.db` (`emoji.json`) to the corresponding location of the new folder
 
+3. So now the new folder structure is as follows:
+```
 Genshin-Discord-Bot/
-    ├── docker-compose.yml
-    └── data/
-        ├── bot/
-        │   └── bot.db
-        ├── app_commands.json
-        └── emoji.json
-
-Go back to the Genshin-Discord-Bot directory. Since the database structure has changed, you need to run the command first:
-
-Windows (Powershell): docker run -v ${pwd}/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database
-
-Linux: sudo docker run -v $(pwd)/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database
-
-After completing the database migration, run docker-compose up to start the bot.
+├── docker-compose.yml
+└── data/
+├── bot/
+│ └── bot.db
+├── app_commands.json
+└── emoji.json
+```
+4. Return to `Genshin-Discord-Bot` Directory, because the database structure has changed, you need to execute the command first
+- Windows (Powershell): `docker run -v ${pwd}/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database`
+- Linux: `sudo docker run -v $(pwd)/data:/app/data ghcr.io/kt-yeh/genshin-discord-bot:latest python main.py --migrate_database`
+5. After completing the database change, execute `docker-compose up` to start running the robot
 
 </details>
 
-File Description & Data Backup
-After successfully running the bot, your folder structure should look like this:
+---
 
+### File Description & Data Backup
+After successfully running the robot, your folder structure should be like this:
+```
 Genshin-Discord-Bot/
-    ├── docker-compose.yml  = Docker configuration file, all bot startup settings are in this file
-    ├── cogs_external/      = You can put your own discord.py cogs in this directory
-    └── data/               = All data generated during bot operation is stored in this directory
-        ├── bot/
-        │   └── bot.db          = Database file
-        ├── font/           = Folder for font data
-        ├── image/          = Folder for image data
-        ├── _app_commands.json  = Command mention configuration file
-        ├── _emoji.json         = Emoji configuration file
-        ├── grafana_dashboard.json = Grafana dashboard configuration file
-        └── prometheus.yml      = Prometheus server configuration file
+├── docker-compose.yml = docker configuration file, all the settings related to starting the robot are in this file
+├── cogs_external/ = You can put your own discord.py cog in this directory
+└── data/ = All data generated by the robot when running are placed in this directory
+├── bot/
+│ └── bot.db = Database file
+├── font/ = Font folder
+├── image/ = Image folder
+├── _app_commands.json = Command mention settings file
+├── _emoji.json = Emoji settings file
+├── grafana_dashboard.json = Grafana dashboard settings file
+└── prometheus.yml = Prometheus server settings file
+```
+All data is placed in the `data` folder, just back up the entire folder; when restoring, overwrite the backed up data back to the `data` folder
 
-All data is stored in the data folder. You can back up the entire folder; to restore, simply overwrite the data folder with your backup.
-
-How to Update
-When the project has an update, go to the Genshin-Discord-Bot directory and open Powershell.
-
-Pull the new image
-
+### How to update
+When the project is updated, go to Open Powershell in the `Genshin-Discord-Bot` directory
+1. Get the new version of the image
+```
 docker-compose pull
-
-Restart the bot
-
+```
+2. Restart the robot
+```
 docker-compose up -d
+```
+## Emoji configuration instructions (data/emoji.json)
 
-Emoji Configuration (data/emoji.json)
-<details><summary>Click here to view full content</summary>
+<details><summary>Click here to view the full content</summary>
 
-Optional, the bot can run normally without configuring emojis.
-
-Go to the data directory and rename _emoji.json to emoji.json.
-
-Upload relevant emojis to your own server.
-
-Fill in the corresponding emojis in the emoji.json file according to Discord format.
+It is not necessary, the robot can run normally without configuring emojis
+1. Go to the `data` directory and rename `_emoji.json` to `emoji.json`
+2. Upload the relevant emojis to your own server
+3. Fill the corresponding emojis into the `emoji.json` file according to the Discord format
 
 Note:
-
-Discord emoji format: <:emoji_name:emoji_ID>, for example: <:Mora:979597026285200002>
-
-You can type \:emoji_name: in a Discord message channel to get the above format.
+- Discord emoji format: `<:table name:table ID>`, for example: `<:Mora:979597026285200002>`
+- You can enter in the Discord message channel `\:tab name:` Get the above format
 
 </details>
 
-Sentry Configuration
-<details><summary>Click here to view full content</summary>
+## Sentry configuration instructions
 
-Optional. Sentry is used to track uncaught exceptions during program execution and sends detailed information such as function calls, variables, exceptions, etc., at the time of the exception to a web page for developers to track. If you don't need this feature, you can skip this setting.
+<details><summary>Click here to view the full content</summary>
 
-Register an account on the official website: https://sentry.io/
+Optional, Sentry is used to track exceptions that are not received during program execution, and send detailed information such as function calls, variables, exceptions, etc. at the time of the exception to the web page for developers to track. If this function is not needed, you can skip this setting
 
-Create a Python project within your account. After creation, you can obtain the project's DSN URL (format: https://xxx@xxx.sentry.io/xxx).
+1. Register an account on the official website: https://sentry.io/
 
-Paste this DSN URL into the SENTRY_SDK_DSN field in the docker-compose.yml file.
+2. Create a Python project in the account, and you can get the DSN address of the project after creation (format: `https://xxx@xxx.sentry.io/xxx`)
+
+3. Paste this DSN address into the `SENTRY_SDK_DSN` field of the `docker-compose.yml` file
 
 Note:
-
-If not specified, Sentry defaults to only sending exceptions that are not caught by try/except.
-
-If you want to send specific caught exceptions to Sentry, use sentry_sdk.capture_exception(exception) within that except block.
+- If not specified, Sentry defaults to only sending exceptions without try/except
+- If you want to send specific received exceptions to Sentry, use in the except `sentry_sdk.capture_exception(exception)`
 
 </details>
 
-Admin Management Commands
-<details><summary>Click here to view full content</summary>
+## Admin management command description
 
-Management commands can only be used within the test server configured in the settings file.
+<details><summary>Click here to view the full content</summary>
 
-/status: Displays bot status, including latency, number of connected servers, connected server names.
-/system: Immediately starts daily check-in tasks, downloads new Enka showcase assets.
-/system precense string1,string2,string3,...: Changes the bot's display status (playing...), randomly changes to one of the set strings every minute, unlimited string quantity.
-/maintenance: Sets game maintenance time. Automatic schedules (check-in, resin check) will not execute during this time.
-/config: Dynamically changes values of some settings.
+Management commands can only be used in the test server set in the configuration file
 
-Additionally, the bot includes the jsk command which can load/reload modules, synchronize commands, execute code, etc. Please refer to the jishaku website for details.
-To use jsk commands, you can:
+```python
 
-Use them in the bot's private messages, e.g., $jsk ping
+/status: Display robot status, including delay, number of connected servers, and name of connected servers
 
-Tag the bot in a regular channel, e.g., @Genshin Helper jsk ping
+/system: Start daily sign-in tasks immediately and download new Enka display cabinet materials
+
+/system precense string1, string2, string3,...: Change the robot display status (playing...), randomly change to one of the set strings every minute, the number of strings is unlimited
+
+/maintenance: Set the game maintenance time, and automatic scheduling (sign-in, resin inspection) will not be executed during this time
+
+/config: Dynamically change the values of some settings
+
+```
+
+In addition, the robot contains the `jsk` command to load/reload modules, synchronize commands, execute code... and so on, please refer to [jishaku Website](https://github.com/Gorialis/jishaku) instructions.
+To use jsk commands, you can
+- Use it in the robot private message, for example: `$jsk ping`
+- Use it in the general channel tag robot, for example: `@原神小帮手 jsk ping`
 
 </details>
 
-Prometheus / Grafana Monitoring Dashboard
-<details><summary>Click here to view full content</summary>
+## Prometheus / Grafana monitoring dashboard description
+<details><summary>Click here to view the full content</summary>
 
-Dashboard Demo Image
-(https://i.imgur.com/SOctABS.png)
+#### Dashboard display
 
-A total of three steps are required:
+![](https://i.imgur.com/SOctABS.png)
 
-Obtain an API Key from the Grafana official website.
+A total of three steps are required, namely
+1. Grafana official website to open an account and obtain the API Key
+2. Set up the Prometheus server
+3. Import the dashboard in Grafana
 
-Configure the Prometheus server.
+#### 1. Grafana account registration
+1. Go to [Grafana official website](https://grafana.com/) to register an account. During the process, you will be asked to select the Cloud region. Just preset it directly
 
-Import the Dashboard into Grafana.
+2. After completing the registration, return to [Official website](https://grafana.com/), select My Account in the upper right corner. As shown in the figure below, you can see that there are Grafana and Prometheus in GRAFANA CLOUD. Select Send Metrics on Prometheus
+![](https://i.imgur.com/YLaV2fB.png)
 
-1. Grafana Account Registration
-Register an account on the Grafana official website. During registration, you will be asked to select a Cloud region; the default is fine.
+3. Scroll to the middle of the page, select Generate now in Password / API Key, and then the black background part of Sending metrics below is very important, stay on this page first
+![](https://i.imgur.com/RlY8ovi.png)
 
-After registration, return to the official website. In the top right corner, select My Account. As shown in the image below, you can see Grafana and Prometheus under GRAFANA CLOUD. Select Send Metrics on Prometheus.
-(https://i.imgur.com/YLaV2fB.png)
+#### 2. Set up Prometheus
+1. Return to the robot folder and open the `docker-compose.yml` file in a text editor
+1. Uncomment the entire `prometheus` section at the bottom (note that the field format must be aligned)
+2. Uncomment `- PROMETHEUS_SERVER_PORT=9091` in the robot advanced settings
 
-Scroll to the middle of the page, select Generate now under Password / API Key, then the black-background section under Sending metrics is very important, stay on this page.
-(https://i.imgur.com/RlY8ovi.png)
-
-2. Configure Prometheus
-Go back to the bot folder, open the docker-compose.yml file with a text editor.
-
-Uncomment the entire prometheus section at the bottom (pay attention to indentation).
-
-Uncomment - PROMETHEUS_SERVER_PORT=9091 in the bot's advanced settings.
-
-Go to the data folder, open the prometheus.yml file with a text editor.
-
-Return to the Grafana webpage. You will see that the remote_write field on the webpage corresponds to the bottom of the prometheus.yml file. Fill in the settings from the webpage's remote_write into the corresponding fields in prometheus.yml, then save the file.
-
+2. Go to `data` folder, open the `prometheus.yml` file in a text editor
+3. Go back to the Grafana webpage just now, you will see that the `remote_write` field on the webpage corresponds to the bottom of the `prometheus.yml` file, fill in the settings of `remote_write` on the webpage one by one into the corresponding fields in `prometheus.yml`, and then save it
+```
 remote_write:
-- url: https://....(Fill in Remote Write Endpoint here)
-  basic_auth:
-    username: 123456(Fill in Username / Instance ID here)
-    password: XXXXXX(Fill in Password / API Key here)
+- url: https://....(fill in Remote Write Endpoint in this line)
+basic_auth:
+username: 123456(fill in Username / Instance ID in this line)
+password: XXXXXX(fill in Password / API Key in this line)
+```
+4. Re-run the robot `docker-compose up -d`
 
-Restart the bot with docker-compose up -d.
+#### Grafana import dashboard
+After having the data, we also need to display the data on the dashboard
 
-Grafana Dashboard Import
-Once you have data, you also need to display it on a dashboard.
+1. Same as steps 1-2, return to [Official website](https://grafana.com/), select My Account in the upper right corner, and this time we press Launch on Grafana
 
-Similar to steps 1-2, return to the official website. In the top right corner, select My Account, and this time click Launch on Grafana to start it.
+2. Select Dashboards on the left, then click New → Import on the right, and then press the Upload JSON file button
+![](https://i.imgur.com/6TFw9EM.png)
 
-On the left, select Dashboards, then on the right, click New → Import, and then click the Upload JSON file button.
-(https://i.imgur.com/6TFw9EM.png)
+3. Go to the `data` folder and upload `grafana_dashboard.json` to Grafana, or copy and paste it to Grafana
 
-Go to the data folder, upload grafana_dashboard.json to Grafana, or you can copy and paste it into Grafana.
-
-After successfully importing the dashboard, you can see various bot data on the dashboard. This completes the process.
+4. After successfully importing the dashboard, you can see the robot's data on the dashboard, and it's done
 
 </details>
 
-Acknowledgements
-APIs:
+## Acknowledgements
+API:
+- Hoyolab: https://github.com/thesadru/genshin.py
+- Discord: https://github.com/Rapptz/discord.py
+- Enka Network: https://github.com/EnkaNetwork/API-docs
+- Mihomo: https://march7th.xiaohei.moe/en/resource/mihomo_api.html
+- Genshin-DB: https://github.com/theBowja/genshin-db
 
-Hoyolab: https://github.com/thesadru/genshin.py
-
-Discord: https://github.com/Rapptz/discord.py
-
-Enka Network: https://github.com/EnkaNetwork/API-docs
-
-Mihomo: https://march7th.xiaohei.moe/en/resource/mihomo_api.html
-
-Genshin-DB: https://github.com/theBowja/genshin-db
-
-Cards:
-
-hattvr/enka-card
-
-DEViantUA/HSRCard
-
-DEViantUA/GenshinPyRail
+Card:
+- [hattvr/enka-card](https://github.com/hattvr/enka-card)
+- [DEViantUA/HSRCard](https://github.com/DEViantUA/HSRCard)
+- [DEViantUA/GenshinPyRail](https://github.com/DEViantUA/GenshinPyRail)
 
 Misc:
-
-Apollo-Roboto/discord.py-ext-prometheus
+- [Apollo-Roboto/discord.py-ext-prometheus](https://github.com/Apollo-Roboto/discord.py-ext-prometheus)
